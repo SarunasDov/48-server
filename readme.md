@@ -34,5 +34,3 @@ This project is for educational porpuses only. Pull request are welcome, but pri
 - admin/service-deleted
 
 ## Authors
-
-[Rimantas](https://github.com/belauzas)
