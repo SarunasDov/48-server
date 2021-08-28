@@ -1,5 +1,6 @@
+
 function ajax(request, callback) {
-    const { method, headers, endpoint, data } = request;
+    const { method, headers, endpoint, data } = request; // is request kintamojo
     const methods = ['GET', 'POST', 'PUT', 'DELETE'];
 
     if (!methods.includes(method) ||
@@ -9,7 +10,7 @@ function ajax(request, callback) {
         return false;
     }
 
-    const xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest(); // js ⁂ klase kurios deka pakuriamas objektas
 
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {

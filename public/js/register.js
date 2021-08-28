@@ -50,16 +50,20 @@ function submitFormInfo(e) {
     }
 
     closeMessage();
+    //aprasas kur/ka siusti {duomenis}
     ajax({
-        method: 'POST',
+        method: 'POST', // GET, PUT, DELETE - kt naudojami metodai. Siuntimo budas
         headers: {},
-        endpoint: 'api/users',
-        data: { username, email, password: pass }
+        endpoint: 'api/users', // kur siusime 
+        //duomenys
+        data: { username, email, password: pass } // kintamojo pass reiksme 
     }, responseAction);
 }
 
+// call back turi priimti atsaka is serverio ir atitinkamai kazka su juo daryti
 function responseAction(response) {
     try {
+        // bandome isparsinti atsaka
         const responseObject = JSON.parse(response);
         // {error: "Message"}
         // {success: "Message"}

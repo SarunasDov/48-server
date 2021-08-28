@@ -1,4 +1,3 @@
-
 import { ajax } from "./ajax.js";
 
 const formMessageDOM = document.querySelector('.form-messages');
@@ -39,13 +38,14 @@ function submitFormInfo(e) {
 
     closeMessage();
     ajax({
-        method: 'POST',
+        method: 'POST', // siuntimo budas
         headers: {},
         endpoint: 'api/token',
         data: { email, password: pass }
     }, responseAction);
 }
 
+// gaunam atsaka
 function responseAction(response) {
     try {
         const responseObject = JSON.parse(response);

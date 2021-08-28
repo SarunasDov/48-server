@@ -67,10 +67,12 @@
   background-color: #fefefe;
   box-shadow: 0 4px 10px #0002;
 }
+
 .form > .form-row {
   display: flex;
   width: 100%;
 }
+
 .form > .form-row > label {
   width: 200px;
   float: left;
